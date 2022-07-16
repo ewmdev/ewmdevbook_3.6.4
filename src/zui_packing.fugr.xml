@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>New Scanner Tab</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZUI_PACKINGI01</SOBJ_NAME>
+    <SOBJ_NAME>LZUI_PACKINGO01</SOBJ_NAME>
+    <SOBJ_NAME>LZUI_PACKINGTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZUI_PACKING</SOBJ_NAME>
+   </INCLUDES>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>SAPLZUI_PACKING</PROGRAM>
+      <SCREEN>0999</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Repack HU</DESCRIPT>
+      <TYPE>I</TYPE>
+      <NEXTSCREEN>0999</NEXTSCREEN>
+      <LINES>027</LINES>
+      <COLUMNS>088</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>/SCWM/S_PACK_VIEW_SCANNER-DEST_HU_PROP_UI</NAME>
+       <TEXT>Dest-HU_______</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>014</LENGTH>
+       <VISLENGTH>014</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>F</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/SCWM/S_PACK_VIEW_SCANNER-DEST_HU_PROP_UI</NAME>
+       <TEXT>____________________________________________________________________________________________________________________________________</TEXT>
+       <ROLLING>X</ROLLING>
+       <LINE>001</LINE>
+       <COLUMN>017</COLUMN>
+       <LENGTH>255</LENGTH>
+       <VISLENGTH>040</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <CONV_EXIT>WCHU</CONV_EXIT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>PUSH</TYPE>
+       <NAME>F8</NAME>
+       <TEXT>F8_New_Dest-HU</TEXT>
+       <LINE>001</LINE>
+       <COLUMN>058</COLUMN>
+       <LENGTH>014</LENGTH>
+       <VISLENGTH>014</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <PUSH_FCODE>F8</PUSH_FCODE>
+       <FORMAT>CHAR</FORMAT>
+       <REQU_ENTRY>N</REQU_ENTRY>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEXT</TYPE>
+       <NAME>/SCWM/S_PACK_VIEW_SCANNER-SOURCE_HU_UI</NAME>
+       <TEXT>Pick-HU_______</TEXT>
+       <LINE>002</LINE>
+       <COLUMN>001</COLUMN>
+       <LENGTH>014</LENGTH>
+       <VISLENGTH>014</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>F</MODIFIC>
+       <REQU_ENTRY>N</REQU_ENTRY>
+       <LABELLEFT>X</LABELLEFT>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>TEMPLATE</TYPE>
+       <NAME>/SCWM/S_PACK_VIEW_SCANNER-SOURCE_HU_UI</NAME>
+       <TEXT>____________________________________________________________________________________________________________________________________</TEXT>
+       <ROLLING>X</ROLLING>
+       <LINE>002</LINE>
+       <COLUMN>017</COLUMN>
+       <LENGTH>255</LENGTH>
+       <VISLENGTH>040</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <FROM_DICT>X</FROM_DICT>
+       <MODIFIC>X</MODIFIC>
+       <CONV_EXIT>WCHU</CONV_EXIT>
+       <INPUT_FLD>X</INPUT_FLD>
+       <OUTPUT_FLD>X</OUTPUT_FLD>
+      </RPY_DYFATC>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW/>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE status_999.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  FIELD /scwm/s_pack_view_scanner-dest_hu_prop_ui</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE scan_dest_hu_999 ON REQUEST.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  FIELD /scwm/s_pack_view_scanner-source_hu_ui</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE scan_source_999 ON REQUEST.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE user_command_999.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>* With BI this is necessary.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*  chain.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*    field /SCWM/S_PACK_VIEW_SCANNER-quantity.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*    field /SCWM/S_PACK_VIEW_SCANNER-unit.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*    module quantity on chain-request.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*  endchain.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+    </item>
+   </DYNPROS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
